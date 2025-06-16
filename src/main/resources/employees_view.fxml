@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.semitruck.EmployeesController"
+      prefWidth="1200" prefHeight="700" spacing="15" styleClass="background-pane">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label text="Drivers / Employees Management" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Search:"/>
+        <TextField fx:id="searchField" promptText="Filter by Name, Company, License" styleClass="search-field"/>
+        <Button fx:id="addButton" text="Add Driver" onAction="#handleAddPopup" styleClass="primary-btn"/>
+        <Button fx:id="editButton" text="Edit Selected" onAction="#handleEditPopup" styleClass="secondary-btn"/>
+        <Button fx:id="deleteButton" text="Delete Selected" onAction="#handleDelete" styleClass="danger-btn"/>
+    </HBox>
+    <TableView fx:id="table" prefHeight="600" styleClass="main-table">
+        <columns>
+            <TableColumn fx:id="driverIdColumn"      text="Driver ID"           prefWidth="80"/>
+            <TableColumn fx:id="nameColumn"          text="Name"               prefWidth="120"/>
+            <TableColumn fx:id="roleColumn"          text="Role"               prefWidth="110"/>
+            <TableColumn fx:id="companyColumn"       text="Company Name"       prefWidth="130"/>
+            <TableColumn fx:id="einColumn"           text="EIN"                prefWidth="100"/>
+            <TableColumn fx:id="licenseNumberColumn" text="License #"          prefWidth="110"/>
+
+            <!-- Move all date columns (DOB, Hire Date, Med Card Expiry, CDL Expiry) here for visibility after License # -->
+            <TableColumn fx:id="dobColumn"           text="DOB"                prefWidth="95"/>
+            <TableColumn fx:id="dateOfHireColumn"    text="Hire Date"          prefWidth="95"/>
+            <TableColumn fx:id="medicalCardExpiryColumn" text="Med Card Expiry" prefWidth="100"/>
+            <TableColumn fx:id="cdlExpiryColumn"     text="CDL Expiry"         prefWidth="100"/>
+
+            <TableColumn fx:id="licenseStateColumn"  text="Lic. State"         prefWidth="70"/>
+            <TableColumn fx:id="cdlClassColumn"      text="CDL Class"          prefWidth="70"/>
+            <TableColumn fx:id="cdlEndorsementsColumn" text="Endorsements"     prefWidth="120"/>
+            <TableColumn fx:id="cdlRestrictionsColumn" text="Restrictions"     prefWidth="100"/>
+            <TableColumn fx:id="phoneColumn"         text="Phone"              prefWidth="100"/>
+            <TableColumn fx:id="emailColumn"         text="Email"              prefWidth="120"/>
+            <TableColumn fx:id="addressColumn"       text="Address"            prefWidth="140"/>
+            <TableColumn fx:id="emergencyContactNameColumn" text="Emergency Name" prefWidth="120"/>
+            <TableColumn fx:id="emergencyContactPhoneColumn" text="Emergency Phone" prefWidth="110"/>
+            <TableColumn fx:id="statusColumn"        text="Status"             prefWidth="90"/>
+            <TableColumn fx:id="notesColumn"         text="Notes"              prefWidth="120"/>
+        </columns>
+    </TableView>
+    <Label text="Tip: Click 'Add Driver' to add a new driver, or double-click a row to edit in a popup. Use the search box to filter." style="-fx-font-size: 11px;"/>
+</VBox>

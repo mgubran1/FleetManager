@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.semitruck.MainViewController">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <MenuItem text="Exit" onAction="#handleExit"/>
+                    </items>
+                </Menu>
+                <Menu text="Help">
+                    <items>
+                        <MenuItem text="About" onAction="#handleAbout"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <TabPane>
+            <tabs>
+                <Tab fx:id="employeesTab" text="Employees">
+                    <content>
+                        <Pane fx:id="employeesTabPane"/>
+                    </content>
+                </Tab>
+                <Tab fx:id="loadsTab" text="Loads">
+                    <content>
+                        <Pane fx:id="loadsTabPane"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

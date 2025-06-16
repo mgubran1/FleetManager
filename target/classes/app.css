@@ -1,0 +1,102 @@
+.background-pane {
+    -fx-background-color: #f7f7f7;
+}
+.main-table {
+    -fx-font-size: 14px;
+    -fx-background-color: #fff;
+    -fx-table-cell-border-color: #e3eafc;
+}
+.input-section {
+    -fx-background-color: #e3eafc;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+.primary-btn {
+    -fx-background-color: #2d89ef; 
+    -fx-text-fill: white; 
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-padding: 7 18 7 18;
+    -fx-effect: dropshadow(three-pass-box, #b3cfff, 4, 0.1, 0, 1);
+}
+.secondary-btn {
+    -fx-background-color: #d0e1f9; 
+    -fx-text-fill: #2d2d2d;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-padding: 7 18 7 18;
+}
+.danger-btn {
+    -fx-background-color: #e81123; 
+    -fx-text-fill: white; 
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-padding: 7 18 7 18;
+}
+.search-field {
+    -fx-background-color: #ffffff; 
+    -fx-border-color: #bbbbbb;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 5 10 5 10;
+}
+.text-field, .combo-box, .date-picker, .text-area {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 5 8 5 8;
+}
+.label {
+    -fx-font-weight: normal;
+    -fx-font-size: 13.5px;
+}
+.dialog-pane {
+    -fx-background-color: #f7f7f7;
+}
+.dialog-pane .button {
+    -fx-font-size: 13px;
+}
+.table-view {
+    -fx-table-cell-border-color: #e3eafc;
+    -fx-background-color: #fff;
+    -fx-selection-bar: #e3eafc;
+}
+.table-view .column-header-background {
+    -fx-background-color: #e3eafc;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-size: 34px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.5px;
+}
+.table-row-cell:selected {
+    -fx-background-color: #d0e1f9;
+}
+.menu-bar {
+    -fx-background-color: #e3eafc;
+}
+.menu {
+    -fx-font-size: 14px;
+}
+.menu-item {
+    -fx-font-size: 13px;
+}
+.tab-pane .tab-header-background {
+    -fx-background-color: #e3eafc;
+}
+.tab {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+.tab:selected {
+    -fx-background-color: #2d89ef;
+    -fx-text-base-color: white;
+}
+.status-bar {
+    -fx-background-color: #f7f7f7;
+    -fx-padding: 7 18 7 18;
+    -fx-font-size: 13px;
+}

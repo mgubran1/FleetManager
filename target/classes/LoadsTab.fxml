@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<VBox fx:controller="com.semitruck.LoadsController"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="10" style="-fx-padding: 20;">
+    <Label text="Loads Management" style="-fx-font-size: 2em; -fx-font-weight: bold;" />
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Search:"/>
+        <TextField fx:id="searchField" promptText="Filter by driver, origin, destination..."/>
+        <Button fx:id="addButton" text="Add Load" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+        <Button fx:id="editButton" text="Edit Selected" style="-fx-background-color: #90CAF9; -fx-text-fill: black;"/>
+        <Button fx:id="deleteButton" text="Delete Selected" style="-fx-background-color: #F44336; -fx-text-fill: white;"/>
+    </HBox>
+    <TableView fx:id="loadsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="loadIdColumn" text="Load ID"/>
+            <TableColumn fx:id="driverNameColumn" text="Driver Name"/>
+            <TableColumn fx:id="pickupDateColumn" text="Pickup Date"/>
+            <TableColumn fx:id="deliveryDateColumn" text="Delivery Date"/>
+            <TableColumn fx:id="originColumn" text="Origin"/>
+            <TableColumn fx:id="destinationColumn" text="Destination"/>
+            <TableColumn fx:id="rateColumn" text="Rate"/>
+            <TableColumn fx:id="milesColumn" text="Miles"/>
+            <TableColumn fx:id="statusColumn" text="Status"/>
+            <TableColumn fx:id="customerNameColumn" text="Customer Name"/>
+            <TableColumn fx:id="customerContactColumn" text="Customer Contact"/>
+            <TableColumn fx:id="brokerNameColumn" text="Broker Name"/>
+            <TableColumn fx:id="poNumberColumn" text="PO Number"/>
+            <TableColumn fx:id="ratePerMileColumn" text="Rate Per Mile"/>
+            <TableColumn fx:id="weightColumn" text="Weight"/>
+            <TableColumn fx:id="trailerTypeColumn" text="Trailer Type"/>
+            <TableColumn fx:id="commodityColumn" text="Commodity"/>
+            <TableColumn fx:id="invoiceNumberColumn" text="Invoice Number"/>
+            <TableColumn fx:id="paidColumn" text="Paid"/>
+            <TableColumn fx:id="documentPathColumn" text="Document"/>
+            <TableColumn fx:id="notesColumn" text="Notes"/>
+        </columns>
+    </TableView>
+</VBox>

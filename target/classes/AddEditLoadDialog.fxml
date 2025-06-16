@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.semitruck.AddEditLoadDialogController">
+    <content>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <GridPane hgap="10" vgap="10" style="-fx-padding: 15;">
+                <!-- Row 0 -->
+                <Label text="Load ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="loadIdField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Driver:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                <ComboBox fx:id="driverComboBox" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                <!-- Row 1 -->
+                <Label text="Pickup Date:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <DatePicker fx:id="pickupDatePicker" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Delivery Date:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <DatePicker fx:id="deliveryDatePicker" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                <!-- Row 2 -->
+                <Label text="Origin:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="originField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Destination:" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                <TextField fx:id="destinationField" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+                <!-- Row 3 -->
+                <Label text="Rate:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="rateField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Miles:" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+                <TextField fx:id="milesField" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+
+                <!-- Row 4 -->
+                <Label text="Customer Name:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="customerNameField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Customer Contact:" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+                <TextField fx:id="customerContactField" GridPane.rowIndex="4" GridPane.columnIndex="3"/>
+
+                <!-- Row 5 -->
+                <Label text="Status:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="statusComboBox" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="Broker Name:" GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+                <TextField fx:id="brokerNameField" GridPane.rowIndex="5" GridPane.columnIndex="3"/>
+
+                <!-- Row 6 -->
+                <Label text="PO Number:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="poNumberField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <Label text="Rate Per Mile:" GridPane.rowIndex="6" GridPane.columnIndex="2"/>
+                <TextField fx:id="ratePerMileField" GridPane.rowIndex="6" GridPane.columnIndex="3"/>
+
+                <!-- Row 7 -->
+                <Label text="Weight:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <TextField fx:id="weightField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                <Label text="Trailer Type:" GridPane.rowIndex="7" GridPane.columnIndex="2"/>
+                <TextField fx:id="trailerTypeField" GridPane.rowIndex="7" GridPane.columnIndex="3"/>
+
+                <!-- Row 8 -->
+                <Label text="Commodity:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                <TextField fx:id="commodityField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+                <Label text="Invoice Number:" GridPane.rowIndex="8" GridPane.columnIndex="2"/>
+                <TextField fx:id="invoiceNumberField" GridPane.rowIndex="8" GridPane.columnIndex="3"/>
+
+                <!-- Row 9 -->
+                <Label text="Paid:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+                <CheckBox fx:id="paidCheckBox" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+                <Label text="Document:" GridPane.rowIndex="9" GridPane.columnIndex="2"/>
+                <HBox spacing="5" GridPane.rowIndex="9" GridPane.columnIndex="3">
+                    <TextField fx:id="documentPathField" prefWidth="120"/>
+                    <Button fx:id="browseDocumentButton" text="Browse"/>
+                </HBox>
+
+                <!-- Row 10 -->
+                <Label text="Notes:" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+                <TextArea fx:id="notesField" GridPane.rowIndex="10" GridPane.columnIndex="1" GridPane.columnSpan="3" prefRowCount="2"/>
+            </GridPane>
+        </ScrollPane>
+    </content>
+    <buttonTypes>
+        <ButtonType text="OK" buttonData="OK_DONE"/>
+        <ButtonType text="Cancel" buttonData="CANCEL_CLOSE"/>
+    </buttonTypes>
+</DialogPane>
