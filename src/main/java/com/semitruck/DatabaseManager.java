@@ -21,7 +21,7 @@ public class DatabaseManager {
 
     public static void initializeSchema() {
         try (Connection conn = getConnection(); Statement stmt = conn.createStatement()) {
-            // Employees table
+            // Employees table - fields must match your Employee model!
             stmt.execute("""
                 CREATE TABLE IF NOT EXISTS employees (
                     driver_id TEXT PRIMARY KEY,
@@ -32,11 +32,23 @@ public class DatabaseManager {
                     license_number TEXT,
                     license_state TEXT,
                     cdl_class TEXT,
-                    cdl_endorsements TEXT
+                    cdl_endorsements TEXT,
+                    cdl_restrictions TEXT,
+                    dob TEXT,
+                    date_of_hire TEXT,
+                    phone TEXT,
+                    email TEXT,
+                    address TEXT,
+                    medical_card_expiry TEXT,
+                    cdl_expiry TEXT,
+                    emergency_contact_name TEXT,
+                    emergency_contact_phone TEXT,
+                    status TEXT,
+                    notes TEXT
                 )
             """);
 
-            // Loads table
+            // Loads table - as before
             stmt.execute("""
                 CREATE TABLE IF NOT EXISTS loads (
                     load_id TEXT PRIMARY KEY,
