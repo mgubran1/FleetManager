@@ -44,7 +44,7 @@ public class LoadDAO {
         try (Connection conn = DatabaseManager.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, load.getLoadId());
-            ps.setString(2, load.getDriverId());
+            ps.setString(2, load.getDriverId()); // Ensure driverId is NOT null!
             ps.setString(3, load.getDriverName());
             ps.setString(4, load.getPickupDate() != null ? load.getPickupDate().toString() : null);
             ps.setString(5, load.getDeliveryDate() != null ? load.getDeliveryDate().toString() : null);
